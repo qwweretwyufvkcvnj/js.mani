@@ -1,0 +1,28 @@
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.18;
+
+contract error {
+    function testingRequire(uint a) public pure {
+    
+        require(a > 35, "Input must be greater than 35  by require function");
+    }
+
+    function testingRevert(uint b) public pure {
+        if (b <= 35) {
+            revert("Input must be less than 35 provided by Revert function");
+        }
+    }
+
+    uint public num=35;
+
+    function testingAssert() public view {
+   
+        assert(num == 35);
+    }
+
+
+
+
+ 
+
+}
